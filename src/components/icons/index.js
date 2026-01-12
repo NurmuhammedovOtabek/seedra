@@ -1,0 +1,12 @@
+export { default as Logo } from "./src/logoSeedra.icon";
+export { default as Instagram } from "./src/instagram.icon";
+export { default as FaceBook } from "./src/facebook.icon";
+export { default as Heart } from "./src/heart.icons";
+export { default as Basket } from "./src/basket.icon";
+export { default as Search } from "./src/search.icon";
+export { default as Fire } from "./src/fire.icon";
+export { default as Barg } from "./src/barg.icon";
+export { default as Toplam } from "./src/toplam.icon";
+export { default as Star } from "./src/star.icon";
+export { default as StarHelf } from "./src/starhelf.icon";
+export { default as Clock } from "./src/Clock.icon";
