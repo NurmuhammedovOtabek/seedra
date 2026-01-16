@@ -31,16 +31,19 @@ const testimonials = [
 
 export default function TestimonialSwiper() {
   return (
-    <div className="w-full py-16 mb-22.5">
+    <div className="w-full py-16 lg:mb-22.5 mt-9">
       <h2 className="text-2xl font-semibold text-center mb-10">
         What our clients say
       </h2>
 
       <Swiper
         modules={[Pagination]}
-        slidesPerView={3}
+        slidesPerView={1}
+        breakpoints={{
+          768:{slidesPerView: 3, initialSlide:1}
+        }}
         centeredSlides
-    initialSlide={1}
+    initialSlide={0}
         spaceBetween={30}
         pagination={{ clickable: true }}
         className="w-full max-w-360 mx-auto"

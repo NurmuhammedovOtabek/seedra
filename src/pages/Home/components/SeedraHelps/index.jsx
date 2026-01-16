@@ -2,7 +2,7 @@ import React from "react";
 import { GirlPoteto,} from "../../../../assets";
 function SeedreHelps(props) {
   return (
-    <div className="container flex justify-between mt-15.75 mb-24">
+    <div className="container flex lg:flex-row flex-col justify-between mt-15.75 max-lg:mt-9 mb-24">
       <div>
         <h1 className="font-semibold text-[#1F2533] text-4xl">
           Seedra helps to grow fast and efficiant
@@ -21,12 +21,15 @@ function SeedreHelps(props) {
         </p>
       </div>
       <div
-        className="w-132  h-131.75 rounded-full p-3.5 
+        className="lg:w-132 w-80.5 lg:h-131.75 h-80.5 rounded-full p-3.5 max-lg:mx-auto max-lg:mt-5.25
     bg-[linear-gradient(220deg,#359740,rgba(207,233,195,0.7)_63%,rgb(255,255,255)_73%)]"
       >
-        <img src={GirlPoteto} alt="" className="w-full h-full p-3 rounded-full object-cover bg-white"/>
+        <img
+          src={GirlPoteto}
+          alt=""
+          className="w-full h-full p-3  rounded-full object-cover bg-white"
+        />
       </div>
-      
     </div>
   );
 }

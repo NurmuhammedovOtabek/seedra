@@ -74,52 +74,56 @@ function ProductGrid(props) {
     }
     
     return (
-        <div className='container grid grid-cols-3 gap-7.5 mt-8 mb-14.25'>
-            {products.map((data)=>{
-                return (
-                  <div
-                    key={data.id}
-                    className="p-7 w-full max-w-87.5 h-128 border-2 border-[#EFEFEF] rounded-lg relative"
-                  >
-                    <img
-                      src={data.image}
-                      alt=""
-                      className="w-full max-w-73.5 h-73.5  rounded-b-xl object-contain"
-                    />
-                    <div className="flex gap-3 items-center mt-7">
-                      <div className="flex">
-                        <Star />
-                        <Star />
-                        <Star />
-                        <Star />
-                        <StarHelf width={16} height={16} />
-                      </div>
-                      <p className="font-normal text-[14px] text-[#70737C]">
-                        ({data.reviewsCount})
-                      </p>
-                    </div>
-                    <p className="text-[#1F2533] text-[16px] font-medium mt-1">
-                      {data.name}
-                    </p>
-                    <div className="flex items-center justify-between mt-2">
-                      <p className="text-[#1F2533] font-semibold text-[28px]">
-                        ${data.price}
-                      </p>
-                      <button className="p-3 border border-[#EFEFEF] rounded-lg">
-                        <Basket />
-                      </button>
-                    </div>
-                    <div className="z-10 absolute top-3 right-3 p-3 border-[#EFEFEF] border bg-[#FFFFFF] rounded-[50%]" 
-                    onClick={()=>{changeHeart(data.id)}}>
-                      <Heart
-                        color="#FFCF55"
-                        color1={data.isFavorite ? "#FFCF55" : "#FFFFF"}
-                      />
-                    </div>
-                  </div>
-                );
-            })}
-        </div>
+      <div className="container grid lg:grid-cols-3 grid-cols-1  lg:gap-7.5 gap-2.75 mt-8 mb-14.25">
+        {products.map((data) => {
+          return (
+            <div
+              key={data.id}
+              className="p-7 w-full lg:max-w-87.5 max-w-79.75 h-128 mx-auto border-2 border-[#EFEFEF] rounded-lg relative"
+            >
+              <img
+                src={data.image}
+                alt=""
+                className="w-full max-w-73.5 h-73.5  rounded-b-xl object-contain"
+              />
+              <div className="flex gap-3 items-center mt-7">
+                <div className="flex">
+                  <Star />
+                  <Star />
+                  <Star />
+                  <Star />
+                  <StarHelf width={16} height={16} />
+                </div>
+                <p className="font-normal text-[14px] text-[#70737C]">
+                  ({data.reviewsCount})
+                </p>
+              </div>
+              <p className="text-[#1F2533] text-[16px] font-medium mt-1">
+                {data.name}
+              </p>
+              <div className="flex items-center justify-between mt-2">
+                <p className="text-[#1F2533] font-semibold text-[28px]">
+                  ${data.price}
+                </p>
+                <button className="p-3 border border-[#EFEFEF] rounded-lg">
+                  <Basket />
+                </button>
+              </div>
+              <div
+                className="z-10 absolute top-3 right-3 p-3 border-[#EFEFEF] border bg-[#FFFFFF] rounded-[50%]"
+                onClick={() => {
+                  changeHeart(data.id);
+                }}
+              >
+                <Heart
+                  color="#FFCF55"
+                  color1={data.isFavorite ? "#FFCF55" : "#FFFFF"}
+                />
+              </div>
+            </div>
+          );
+        })}
+      </div>
     );
 }
 

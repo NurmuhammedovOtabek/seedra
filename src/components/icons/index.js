@@ -10,3 +10,5 @@ export { default as Toplam } from "./src/toplam.icon";
 export { default as Star } from "./src/star.icon";
 export { default as StarHelf } from "./src/starhelf.icon";
 export { default as Clock } from "./src/Clock.icon";
+export { default as Burger } from "./src/burger.icon";
+export { default as Strelbottom } from "./src/strelbottom.icon";
